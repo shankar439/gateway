@@ -1,0 +1,26 @@
+server:
+  port: 8181
+spring:
+  application:
+    name: spring-gateway-service
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+    consul:
+      enabled: true
+      host: 192.168.174.130
+      port: 32221
+      discovery:
+        prefer-ip-address: true
+        enabled: true
+        health-check-path: /actuator/health
+        health-check-timeout: 20s
+        heartbeat:
+          enabled: true
+      retry:
+        max-interval: 21
