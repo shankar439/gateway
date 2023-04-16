@@ -13,7 +13,8 @@ spring:
             allowedHeaders: "*"
     consul:
       enabled: true
-      host: 192.168.174.130
+#       host: 192.168.174.130
+      host: 192.168.136.131
       port: 32221
       discovery:
         prefer-ip-address: true
